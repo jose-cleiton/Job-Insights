@@ -3,19 +3,8 @@ from functools import lru_cache
 
 
 @lru_cache
-def read(path):
-    """Reads a file from a given path and returns its contents
-
-    Parameters
-    ----------
-    path : str
-        Full path to file
-
-    Returns
-    -------
-    list
-        List of rows as dicts
-    """
+def read(path: str) -> list:
+    """Read a CSV file and return a list of dictionaries."""
     dados = []
     with open(path, "r") as f:
         reader = csv.DictReader(f)
