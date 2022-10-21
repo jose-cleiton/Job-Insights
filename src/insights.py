@@ -1,3 +1,5 @@
+from logging import exception
+
 from src.jobs import read
 
 
@@ -146,7 +148,7 @@ def get_min_salary(path):
     return min(min_salaries)
 
 
-def matches_salary_range(job, salary):
+def matches_salary_range(job: dict, salary: int):
     """Checks if a given salary is in the salary range of a given job
 
     Parameters
@@ -169,7 +171,22 @@ def matches_salary_range(job, salary):
         If `job["min_salary"]` is greather than `job["max_salary"]`
         If `salary` isn't a valid integer
     """
-    pass
+
+    try:
+        salary_max = int(job["max_salary"])
+        salary_min = int(job["min_salary"])
+        salary = int(salary)
+        assert salary_min <= salary_max
+    except AssertionError:
+        raise ValueError("min_salary is greather than max_salary")
+    except ValueError:
+        raise ValueError("Invalid salary range")
+    except TypeError:
+        raise ValueError("Salary or salary range is not an integer")
+    except KeyError:
+        raise ValueError("Salary is missing")
+    else:
+        return salary >= salary_min and salary <= salary_max
 
 
 def filter_by_salary_range(jobs, salary):
