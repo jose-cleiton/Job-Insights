@@ -68,12 +68,12 @@ def get_unique_industries(path):
 
     for job in jobs_data:
         unique_industries.add(job["industry"])
-    unique_industries = unique_industries - {''}
-    
+    unique_industries = unique_industries - {""}
+
     return list(unique_industries)
 
 
-def filter_by_industry(jobs, industry):
+def filter_by_industry(jobs: dict, industry: str) -> list:
     """Filters a list of jobs by industry
 
     Parameters
@@ -88,7 +88,12 @@ def filter_by_industry(jobs, industry):
     list
         List of jobs with provided industry
     """
-    return []
+    filtered_industry = []
+    for j in jobs:
+        if j["industry"] == industry:
+            filtered_industry.append(j)
+
+    return filtered_industry
 
 
 def get_max_salary(path):
