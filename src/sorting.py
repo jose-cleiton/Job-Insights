@@ -2,7 +2,7 @@ import math
 from datetime import date
 
 
-def max_salary_key(job):
+def max_salary_key(job: dict):
     """
     Gets max_salary as a sorting key.
 
