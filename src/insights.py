@@ -70,41 +70,6 @@ def filter_by_job_type(jobs: list, job_type: str) -> list:
 
 
 def get_unique_industries(path: str) -> list:
-    """Checks all different industries and returns a list of them
-
-    Deve chamar `read`
-
-       Parâmetros
-       ----------
-       caminho: str
-           Deve ser passado para `read`
-
-       Devoluções
-       -------
-       Lista
-           Lista de indústrias exclusivas
-    """
-    jobs_data = read(path)
-    unique_industries = set()
-
-    for job in jobs_data:
-        unique_industries.add(job["industry"])
-
-    return list(unique_industries)
-    """Checks all different industries and returns a list of them
-
-    Must call `read`
-
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    list
-        List of unique industries
-    """
     jobs_data = read(path)
     unique_industries = set()
 
@@ -116,20 +81,7 @@ def get_unique_industries(path: str) -> list:
 
 
 def filter_by_industry(jobs: dict, industry: str) -> list:
-    """Filters a list of jobs by industry
 
-    Parameters
-    ----------
-    jobs : list
-        List of jobs to be filtered
-    industry : str
-        Industry for the list filter
-
-    Returns
-    -------
-    list
-        List of jobs with provided industry
-    """
     filtered_industry = []
     for j in jobs:
         if j["industry"] == industry:
