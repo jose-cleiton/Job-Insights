@@ -7,19 +7,19 @@ def test_sort_by_criteria():
     DATE_POSTED = "date_posted"
     criteria = [
         {
-            "min_salary": 12000,
-            "max_salary": 24000,
-            "date_posted": "2022-10-21",
+            MIN_SALARY: 12000,
+            MAX_SALARY: 24000,
+            DATE_POSTED: "2022-10-21",
         },
         {
-            "min_salary": 28000,
-            "max_salary": 38000,
-            "date_posted": "2022-12-23",
+            MIN_SALARY: 28000,
+            MAX_SALARY: 38000,
+            DATE_POSTED: "2022-12-23",
         },
         {
-            "min_salary": 20000,
-            "max_salary": 29000,
-            "date_posted": "2022-11-22",
+            MIN_SALARY: 20000,
+            MAX_SALARY: 29000,
+            DATE_POSTED: "2022-11-22",
         },
     ]
     sort_by(criteria, MIN_SALARY)
