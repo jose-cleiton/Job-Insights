@@ -25,7 +25,28 @@ def get_unique_job_types(path: str) -> list:
     return list(unique_jobs)
 
 
-def filter_by_job_type(jobs, job_type):
+def filter_by_job_type(jobs: list, job_type: str) -> list:
+    """Filtrar lista de trabalhos por tipo de trabalho
+
+    Parâmetros
+    ----------
+    jobs: list
+        Lista de trabalhos
+    job_type: str
+        Tipo de trabalho
+
+    Devoluções
+    -------
+    Lista
+        Lista de trabalhos filtrada
+    """
+    filtered_jobs = []
+
+    for job in jobs:
+        if job["job_type"] == job_type:
+            filtered_jobs.append(job)
+
+    return filtered_jobs
     """Filters a list of jobs by job_type
 
     Parameters
@@ -48,7 +69,28 @@ def filter_by_job_type(jobs, job_type):
     return [job for job in jobs if job["job_type"] == job_type]
 
 
-def get_unique_industries(path):
+def get_unique_industries(path: str) -> list:
+    """Checks all different industries and returns a list of them
+
+    Deve chamar `read`
+
+       Parâmetros
+       ----------
+       caminho: str
+           Deve ser passado para `read`
+
+       Devoluções
+       -------
+       Lista
+           Lista de indústrias exclusivas
+    """
+    jobs_data = read(path)
+    unique_industries = set()
+
+    for job in jobs_data:
+        unique_industries.add(job["industry"])
+
+    return list(unique_industries)
     """Checks all different industries and returns a list of them
 
     Must call `read`
@@ -121,7 +163,7 @@ def get_max_salary(path: str) -> int:
     return max(max_salaries)
 
 
-def get_min_salary(path):
+def get_min_salary(path: str) -> int:
     """Get the minimum salary of all jobs
 
     Must call `read`
