@@ -12,6 +12,7 @@ def get_job(jobs, id_):
             return job
 
 
+
 def get_int_from_args(field_name, default_value):
     try:
         value = int(request.args.get(field_name, default_value))
