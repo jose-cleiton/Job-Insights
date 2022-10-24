@@ -1,5 +1,5 @@
 from src.sorting import sort_by
-from tests.sorting.mocks import jobs
+from tests.sorting.mock_jobs import jobs
 
 
 def test_sort_by_criteria():
