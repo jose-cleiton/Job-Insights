@@ -1,13 +1,58 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Job Insights
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+O Job Insights é um aplicativo de linha de comando que permite buscar vagas de emprego e obter informações sobre elas.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## Estrutura de pastas
+
+O projeto é dividido em duas pastas principais:
+
+- "src/": uma pasta que contém os arquivos de código-fonte Python do projeto.
+- "tests/": uma pasta que contém os arquivos de teste do projeto.
+
+## Pré-requisitos
+
+Para usar o Job Insights, você precisará ter instalado os seguintes pré-requisitos em seu sistema:
+
+- Python 3.6 ou superior
+- Bibliotecas Python "requests", "beautifulsoup4" e "pandas"
+
+## Instalação
+
+Para instalar as dependências do projeto, execute o seguinte comando:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+## Execução
+
+Para executar o aplicativo, execute o seguinte comando:
+
+```bash
+python -m src.app
+
+```
+
+## Testes
+
+Para executar os testes do projeto, execute o seguinte comando:
+
+```bash
+python -m unittest discover -s tests
+
+```
+
+## Contribuição
+
+Se você deseja contribuir para o projeto, por favor siga as seguintes etapas:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para suas alterações.
+3. Faça as alterações e commit suas mudanças.
+4. Envie um pull request para que suas alterações possam ser revisadas.
+
+## Licença
+
+O Job Insights está licenciado sob a licença MIT. Consulte o arquivo %%%"LICENSE"%%% para obter mais detalhes.
+
