@@ -33,6 +33,21 @@ Para executar o aplicativo, execute o seguinte comando:
 python -m src.app
 
 ```
+## Docker
+
+Para executar o aplicativo em um container Docker, execute o seguinte comando:
+
+```bash
+docker commpose up -d
+  
+  ```
+
+  URL:
+
+  ```bash	
+http://localhost:5000/jobs
+  
+  ```
 
 ## Testes
 
